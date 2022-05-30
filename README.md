@@ -25,7 +25,6 @@ This application was meant as a tutorial to learn Vue.js v3. It uses Vue Router 
 
 ## Usage:
 ![Task Tracker Screenshot](src/assets/VueTaskTracker.jpg) <br />
-### Deployed: 
 A user can add a task that is then listed below. They can double click each task to toggle the green reminder and they can also delete a task by clicking the X. The About page in the footer takes a user to the version of the application.
 
 ## License: 
