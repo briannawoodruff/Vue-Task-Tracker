@@ -27,7 +27,7 @@ export default {
     },
     methods: {
     async addTask(task) {
-      const res = await fetch("api/tasks", {
+      const res = await fetch("https://vue-tasktracker-backend.herokuapp.com/tasks", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -41,7 +41,7 @@ export default {
     },
     async deleteTask(id) {
       if (confirm("Are you sure?")) {
-        const res = await fetch(`api/tasks/${id}`, {
+        const res = await fetch(`https://vue-tasktracker-backend.herokuapp.com/tasks/${id}`, {
           method: "DELETE",
         });
 
@@ -54,7 +54,7 @@ export default {
       const taskToToggle = await this.fetchTask(id)
       const updTask = {...taskToToggle, reminder: !taskToToggle.reminder}
 
-      const res = await fetch(`api/tasks/${id}`, {
+      const res = await fetch(`https://vue-tasktracker-backend.herokuapp.com/tasks/${id}`, {
         method: 'PUT',
         headers: {
           'Content-type': 'application/json'
@@ -69,14 +69,14 @@ export default {
       );
     },
     async fetchTasks() {
-      const res = await fetch("api/tasks");
+      const res = await fetch("https://vue-tasktracker-backend.herokuapp.com/tasks");
 
       const data = await res.json();
 
       return data;
     },
     async fetchTask(id) {
-      const res = await fetch(`api/tasks/${id}`);
+      const res = await fetch(`https://vue-tasktracker-backend.herokuapp.com/tasks/${id}`);
 
       const data = await res.json();
 
