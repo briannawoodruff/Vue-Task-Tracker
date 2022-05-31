@@ -4,7 +4,7 @@ module.exports = defineConfig({
   devServer: {
     proxy: {
       '^/api': {
-        target: 'http://localhost:5000',
+        target: 'https://vue-tasktracker-backend.herokuapp.com/',
         changeOrigin: true,
         loglevel: 'debug',
         pathRewrite: { '^/api': '/' }
